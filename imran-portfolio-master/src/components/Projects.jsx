@@ -1,40 +1,71 @@
-
 import React from "react";
-import vpn from '../assets/vpn.png'
-import copeople from '../assets/copeople.png'
+import imagetoemoji from '../assets/imagetoemoji.png'
+import jobportal from '../assets/jobportal.PNG';
+import stockmarket from '../assets/stockmarket.png'
+import todoweb from '../assets/todoweb.png'
 import Footer from './Footer'
+
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
     return (
-        <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            {title=='Snap Shot' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={vpn} alt="" />
-            </a>}
-            {title=='Co People' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={copeople} alt="" />
-            </a>}
-            <div className="p-4 sm:p-6">
-                <a href="#">
-                    <h5 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-500">{title}</h5>
-                </a>
-                <p className="font-normal text-sm sm:text-base md:text-lg text-gray-300 dark:text-gray-400">{description}</p>
+        <div className="max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img className="w-full rounded-t-lg h-auto object-cover" src={image} alt={title} />
+            </a>
+            <div className="p-4">
+                <h5 className="text-2xl font-bold text-white">{title}</h5>
+                <p className="text-gray-300">{description}</p>
             </div>
-            <div className='m-2 sm:m-4 lg:m-6 flex justify-between'>
+            <div className='m-2 flex justify-between'>
                 <div className='flex flex-wrap gap-2 pl-2'>
                     {technologies.map((tag, index) => (
-                        <p
-                            key={`${index}-${tag}`}
-                            className='text-[14px] text-blue-500'
-                        >
-                            #{tag}
-                        </p>
+                        <p key={index} className='text-[14px] text-blue-500'>#{tag}</p>
                     ))}
                 </div>
-                <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300">GitHub</a>
+                <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-2 hover:text-green-500 duration-300">GitHub</a>
             </div>
         </div>
     );
 };
+
+// const ProjectCard = ({ image, title, description, git, technologies }) => {
+//     return (
+//         <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            
+//             {title=='imagetoemoji' && <a href="#">
+//                 <img className="w-full rounded-t-lg h-auto object-cover " src={imagetoemoji} alt="" />
+//             </a>}
+//             {title=='jobportal' && <a href="#">
+//                 <img className="w-full rounded-t-lg h-auto object-cover " src={jobportal} alt="" />
+//             </a>}
+//             {title=='todoweb' && <a href="#">
+//                 <img className="w-full rounded-t-lg h-auto object-cover " src={todoweb} alt="" />
+//             </a>}
+//             {title=='stockmarket' && <a href="#">
+//                 <img className="w-full rounded-t-lg h-auto object-cover " src={image} alt="" />
+//             </a>}
+//             <div className="p-4 sm:p-6">
+//                 <a href="#">
+//                     <h5 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-500">{title}</h5>
+//                 </a>
+//                 <p className="font-normal text-sm sm:text-base md:text-lg text-gray-300 dark:text-gray-400">{description}</p>
+//             </div>
+//             <div className='m-2 sm:m-4 lg:m-6 flex justify-between'>
+//                 <div className='flex flex-wrap gap-2 pl-2'>
+//                     {technologies.map((tag, index) => (
+//                         <p
+//                             key={`${index}-${tag}`}
+//                             className='text-[14px] text-blue-500'
+//                         >
+//                             #{tag}
+//                         </p>
+//                     ))}
+//                 </div>
+//                 <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300">GitHub</a>
+//             </div>
+//         </div>
+//     );
+// };
   
 const Projects = () => {
     return (
@@ -60,18 +91,32 @@ const Projects = () => {
 
 export const project = [
     {
-        title:'Co People',
-        description:'Co People is a dynamic web application I crafted using React, Node JS and React. This project is a modern and engaging social platform that allows users to connect, share content and interact seamlessly.',
-        image: {vpn},
-        git:'https://github.com/nithingooud/CoPeople',
-        technologies:['MongoDb' ,'ReactJS' , 'NodeJS']
+        title: 'Generation Of Image To Emoji',
+        description: 'Implemented a machine learning algorithm to generate accurate emojis from input images. Used Deep Neural Network with datasets from Kaggle.',
+        image: imagetoemoji, // Replace with actual image import
+        git: 'https://github.com/2000031895imran/emojify-master.git',
+        technologies: ['Python', 'TensorFlow', 'Google Colab']
     },
     {
-        title:'Snap Shot',
-        description:'SnapShot is a stunning portfolio that I exclusively designed using React JS and tailwind CSS.This Project serves as a representation of a photographer’s work, highlighting their portfolio and services.',
-        image: {copeople},
-        git:"https://github.com/nithingooud/vpn_studios",
-        technologies:[ 'React JS', 'tailwind CSS']
+        title: 'Job Portal',
+        description: 'Created a job portal website for job seekers to explore opportunities and employers to post openings. Featuring user authentication, search functionality, and a responsive design for seamless user experience.',
+        image: jobportal, // Replace with actual image import
+        git: 'https://github.com/2000031895imran/demo-job-portal-client.git',
+        technologies: ['MERN Stack', 'MongoDB', 'JavaScript']
+    },
+    {
+        title: 'Todo-Web-Application',
+        description: 'Developed a responsive to-do web application with features for user signup and login. Implemented Create, Read, Update, Delete (CRUD) operations for managing daily tasks.',
+        image: todoweb, // Replace with actual image import
+        git: 'https://github.com/2000031895imran/Todo-Web-Application.git',
+        technologies: ['HTML', 'CSS']
+    },
+    {
+        title: 'Stock Market Prediction',
+        description: 'Developed and implemented machine learning algorithms for stock market prediction. Achieved a 15% improvement in prediction accuracy.',
+        image: stockmarket, // Replace with actual image import
+        git: 'https://github.com/2000031895imran/Stock-Market-Predection.git',
+        technologies: ['Python', 'Machine Learning', 'Google Colab']
     }
 ]
 

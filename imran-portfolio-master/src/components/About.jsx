@@ -32,10 +32,10 @@ const About = () => {
         <div className='flex flex-col justify-around'>
           <div className='sm:px-16 px-2'>
             <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Introduction</h2>
-            <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm SHAIK.IMRAN SHAREEF, a 2024 graduate🎓 with a passionate Software Developer with expertise in Full stack,Java,Python, specializing in full-stack web development, front-end,back-end and AI-powered solutions  <a className='text-green-300 hover:text-green-500 duration-300' href='https://www.linkedin.com/in/imran-shareef-shaik-366a86218/' target='_blank'>Software developer</a>🚀.
+            <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm SHAIK.IMRAN SHAREEF, a 2024 graduate🎓 with a passionate Software Developer with expertise in Full stack,Java,Python, specializing in full-stack web development, front-end,back-end and AI-powered solutions.I thrive on solving complex problems and continuously learning new technologies to create innovative solutions.   <a className='text-green-300 hover:text-green-500 duration-300' href='https://www.linkedin.com/in/imran-shareef-shaik-366a86218/' target='_blank'>Software developer</a>🚀.
               <br />
               ✍️ Beyond coding, I love sharing my insights and experiences through engaging blogs on <a className=' text-purple-300 hover:text-purple-400 duration-300' href="https://medium.com/@2000031895cse" target='_blank'>Medium</a>, where I delve into the intricacies of software development and technology trends.
-              On a different note, I'm also into photography📸. It's not just a hobby; I see it as a way to capture moments🌟📷, tell stories.</p>
+              On a different note, I'm also into Reading books📸. It's not just a hobby; 📚 It Enhances knowledge, improves focus, boosts creativity, and strengthens analytical thinking. </p>
 
             <ButtonLink
               url='https://drive.google.com/file/d/1756asScXJYg2bIGfIbs7Mpzb8Frvz6XL/view?usp=drive_link'
